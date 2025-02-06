@@ -1,2 +1,12 @@
-/target
-/data
+# Ignore the 'data' and 'target' folders
+data/
+target/
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Rust build artifacts (just in case)
+**/target/

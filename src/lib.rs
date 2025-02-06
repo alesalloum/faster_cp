@@ -35,8 +35,6 @@ fn build_graph(edges: Vec<(i32, i32)>) -> PyResult<usize> {
 
 #[pymodule]
 fn faster_cp(_py: Python<'_>, m: Bound<'_, PyModule>) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(add, m.clone())?)?; // ✅ Use `.clone()`
-    m.add_function(wrap_pyfunction!(multiply, m.clone())?)?; // ✅ Register multiply
     m.add_function(wrap_pyfunction!(build_graph, m.clone())?)?;
     m.add_class::<GraphWrapper>()?;
     m.add_function(wrap_pyfunction!(simulated_annealing_partition, m.clone())?)?;
