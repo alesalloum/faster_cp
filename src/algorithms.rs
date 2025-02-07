@@ -213,7 +213,7 @@ pub fn simulated_annealing_partition(
         T *= cooling_rate;
 
         // **Progress Output**
-        if iter_idx % 100 == 0 {
+        if iter_idx % 10000 == 0 {
             println!(
                 "Iteration {}, Best DL: {:.2}, Current DL: {:.2}, Temperature: {:.4}",
                 iter_idx, best_dl, current_dl, T
